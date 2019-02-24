@@ -44,7 +44,7 @@ export class CardNumberComponent implements ControlValueAccessor {
     this.propagateTouch();
   }
 
-  numberOnly(event, i): boolean {
+  numberOnly(event): boolean {
     return numberOnly(event);
   }
 

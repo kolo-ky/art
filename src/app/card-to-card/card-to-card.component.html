@@ -1,7 +1,7 @@
 <form class="card-to-card" [formGroup]="transferForm" (submit)="save()">
   <ul class="cards">
     <li class="card__item">
-      <span class="card__title">Карта плательщика {{selectedMoth}}</span>
+      <span class="card__title">Карта плательщика</span>
 
       <div class="card-form">
         <app-card-number formControlName="payerCard"></app-card-number>
@@ -42,7 +42,7 @@
         placeholder="Сумма"
         class="card-form__pay-value"
         formControlName="amount"
-        (keypress)="numberOnly($event, i)"
+        (keypress)="numberOnly($event)"
       >
 
       <button type="submit" class="card-form__button">Перевести</button>

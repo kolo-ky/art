@@ -74,7 +74,7 @@ export class CardToCardComponent implements OnInit {
     this.router.navigate(['history']);
   }
 
-  public numberOnly(event, i): boolean {
+  public numberOnly(event): boolean {
     return numberOnly(event);
   }
 
