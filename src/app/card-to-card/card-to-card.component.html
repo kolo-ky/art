@@ -1,0 +1,51 @@
+<form class="card-to-card" [formGroup]="transferForm" (submit)="save()">
+  <ul class="cards">
+    <li class="card__item">
+      <span class="card__title">Карта плательщика {{selectedMoth}}</span>
+
+      <div class="card-form">
+        <app-card-number formControlName="payerCard"></app-card-number>
+
+        <div class="card-form__group card-form__group--payer">
+          <input type="text" class="card-form__input" formControlName="payer">
+
+          <div class="card-form__active-card-group">
+            <select
+              class="card-form__active-card-select"
+              formControlName="month"
+            >
+              <option *ngFor="let item of month" [value]="prepareMonth(item)">{{prepareMonth(item)}}</option>
+            </select>
+
+            <select
+              class="card-form__active-card-select"
+              formControlName="year"
+            >
+              <option *ngFor="let item of year" [value]="item">{{item}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </li>
+
+    <li class="card__item">
+      <span class="card__title">Карта получателя</span>
+
+      <div class="card-form">
+        <app-card-number formControlName="recipientCard"></app-card-number>
+      </div>
+    </li>
+
+    <li class="card__footer">
+      <input
+        type="text"
+        placeholder="Сумма"
+        class="card-form__pay-value"
+        formControlName="amount"
+        (keypress)="numberOnly($event, i)"
+      >
+
+      <button type="submit" class="card-form__button">Перевести</button>
+    </li>
+  </ul>
+</form>

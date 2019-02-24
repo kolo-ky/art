@@ -1,0 +1,11 @@
+<div class="card-form__group card-form__group--number">
+  <input
+    type="text"
+    class="card-form__input"
+    *ngFor="let number of payerCard; let i = index; trackBy: trackByFn"
+    [value]="number"
+    (input)="changeNumber($event, i)"
+    [maxLength]="4"
+    (keypress)="numberOnly($event, i)"
+  >
+</div>

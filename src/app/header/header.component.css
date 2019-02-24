@@ -1,0 +1,18 @@
+/* Хедер */
+
+.transfers__header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 100px;
+  width: 1200px;
+  height: 80px;
+  background-color: #3a4651;
+  box-sizing: border-box;
+}
+
+.transfers__title {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 1px;
+}

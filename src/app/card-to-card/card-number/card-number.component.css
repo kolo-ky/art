@@ -1,0 +1,30 @@
+.card-form__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  width: auto;
+}
+
+.card-form__group--number {
+  position: relative;
+}
+
+.card-form__group--number::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  color: #ffffff;
+  content: 'Номер';
+}
+
+.card-form__group--number .card-form__input {
+  width: 90px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.card-form__input:focus {
+  outline: 1px solid #2e90e7;
+}

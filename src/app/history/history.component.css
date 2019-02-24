@@ -1,0 +1,71 @@
+.history {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #3a4651;
+}
+
+.history__head-number,
+.history__head-payer,
+.history__head-recipient,
+.history__head-amount,
+.history__head-date,
+.history__head-action {
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+  background-color: #3a4651;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.history__item-number,
+.history__item-payer,
+.history__item-recipient,
+.history__item-amount,
+.history__item-date,
+.history__item-action {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #3a4651;
+}
+
+.history__item-action {
+  display: flex;
+  justify-content: space-around;
+}
+
+.history__item-repeat-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #09ab74;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.history__item-delete-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: darkred;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.history__item-repeat-button:hover,
+.history__item-repeat-button:focus,
+.history__item-delete-button:hover,
+.history__item-delete-button:focus {
+  outline: none;
+  opacity: 0.7;
+}
+
+.empty-history {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  line-height: 22px;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #edeef0;
+}
+
+/* Табы */
+
+.tabs {
+  position: relative;
+  padding: 20px;
+  width: 1200px;
+  color: #323232;
+  background-color: #d7dde4;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+}
+

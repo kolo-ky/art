@@ -1,0 +1,17 @@
+<ul class="tabs__list">
+  <li class="tabs__item">
+    <a class="tabs__link" routerLink="pay" routerLinkActive="tabs__link--active">
+      Создание перевода
+    </a>
+  </li>
+
+  <li class="tabs__item">
+    <a class="tabs__link"
+       routerLink="history"
+       routerLinkActive="tabs__link--active"
+       [routerLinkActiveOptions]="{ exact: true }"
+    >
+      История
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,24 @@
+<table width="100%" class="history" *ngIf="transfers.length">
+  <tr class="history__head">
+    <th class="history__head-number">№</th>
+    <th class="history__head-payer">Карта плательщика</th>
+    <th class="history__head-recipient">Карта получателя</th>
+    <th class="history__head-amount">Сумма</th>
+    <th class="history__head-date">Дата выполнения</th>
+    <th class="history__head-action">Действие</th>
+  </tr>
+  <tr class="history__item" *ngFor="let transfer of transfers">
+    <td class="history__item-number">{{transfer.id}}</td>
+    <td class="history__item-payer">{{getNumber(transfer.payerCard)}}</td>
+    <td class="history__item-recipient">{{getNumber(transfer.recipientCard)}}</td>
+    <td class="history__item-amount">{{transfer.amount}}</td>
+    <td class="history__item-date">{{transfer.date}}</td>
+    <td class="history__item-action">
+      <button class="history__item-repeat-button" [routerLink]="['','pay', transfer.id]">Повторить</button>
+      <button class="history__item-delete-button" (click)="deletePay(transfer)">Удалить</button>
+    </td>
+  </tr>
+</table>
+<div class="empty-history" *ngIf="!transfers.length">
+  Вы еще не сделали ни одного перевода
+</div>

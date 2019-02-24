@@ -1,0 +1,122 @@
+/* Карты */
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-image: url("../../assets/img/forward.svg");
+  background-position: center center;
+  background-size: 60px auto;
+  background-repeat: no-repeat;
+  list-style: none;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 15px;
+  width: 500px;
+  height: 300px;
+  margin-top: 60px;
+  border-radius: 15px;
+  background-color: #3a4651;
+  box-sizing: border-box;
+}
+
+.card__title {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Форма */
+
+.card-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.card-form__group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  width: auto;
+}
+
+.card-form__group--payer {
+  position: relative;
+}
+
+.card-form__group--payer::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  color: #ffffff;
+  content: 'ФИО получателя';
+}
+
+.card-form__group--payer .card-form__input {
+  width: 250px;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.card-form__active-card-group {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  position: relative;
+}
+
+.card-form__active-card-group::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -25px;
+  color: #ffffff;
+  content: 'Активна до';
+}
+
+.card-form__active-card-group .card-form__active-card-select {
+  width: 70px;
+  height: 35px;
+}
+
+.card__footer {
+  padding-top: 40px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.card-form__pay-value {
+  padding: 0 10px;
+  margin-right: 15px;
+  width: 200px;
+  height: 30px;
+  font-size: 14px;
+}
+
+.card-form__button {
+  padding: 0 20px;
+  color: #ffffff;
+  background-color: #09ab74;
+  border: none;
+  cursor: pointer;
+}
+
+
+.card-form__input:focus,
+.card-form__active-card-select:focus,
+.card-form__pay-value:focus,
+.card-form__button:focus {
+  outline: 1px solid #2e90e7;
+}
