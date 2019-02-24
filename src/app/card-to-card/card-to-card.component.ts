@@ -25,25 +25,14 @@ export class CardToCardComponent implements OnInit {
   }
 
   private static buildFormControls(pay) {
-    if (pay) {
-      return {
-        payerCard: new FormControl(pay.payerCard),
-        payer: new FormControl(pay.payer),
-        month: new FormControl(pay.cardActive.split('.')[0]),
-        year: new FormControl(pay.cardActive.split('.')[1]),
-        recipientCard: new FormControl(pay.recipientCard),
-        amount: new FormControl(pay.amount)
-      };
-    } else {
-      return {
-        payerCard: new FormControl(''),
-        payer: new FormControl(''),
-        month: new FormControl('01'),
-        year: new FormControl('2019'),
-        recipientCard: new FormControl(''),
-        amount: new FormControl(0)
-      };
-    }
+    return {
+      payerCard: new FormControl(pay ? pay.payerCard : ''),
+      payer: new FormControl(pay ? pay.payer : ''),
+      month: new FormControl(pay ? pay.cardActive.split('.')[0] : '01'),
+      year: new FormControl(pay ? pay.cardActive.split('.')[1] : '2019'),
+      recipientCard: new FormControl(pay ? pay.recipientCard : ''),
+      amount: new FormControl(pay ? pay.amount : 0)
+    };
   }
 
   ngOnInit() {
